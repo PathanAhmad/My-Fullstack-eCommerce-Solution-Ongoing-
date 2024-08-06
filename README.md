@@ -3,11 +3,11 @@ I am currently undertaking a complete rebuild of the project from scratch. This 
 
 Features I'm still working on:
 
-1. User Authentication
+~~1. User Authentication~~
 
 ~~Backend Authentication: To be implemented from scratch using JSON Web Tokens (JWT) for enhanced security.~~
 
-Frontend Authentication: Redesigning the user authentication flow for a better user experience.
+~~Frontend Authentication: Redesigning the user authentication flow for a better user experience.~~
 
 2. Checkout Process
 
