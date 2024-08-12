@@ -1,53 +1,131 @@
+/* Main container */
 main {
   min-height: 80vh;
+  display: flex; /* Adds flexibility for content alignment */
+  flex-direction: column; /* Ensures the content is stacked vertically */
+  justify-content: center; /* Centers content vertically */
+  padding: 1rem; /* Adds padding to ensure content doesn't touch edges */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+  background: linear-gradient(135deg, #f3f4f6, #e2e6ea); /* Subtle gradient background */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Rating section */
+.rating {
+  display: flex; /* Aligns rating elements in a row */
+  align-items: center; /* Centers items vertically */
 }
 
 .rating span {
-  margin: 0.1rem;
+  margin: 0 0.2rem; /* Ensures spacing between stars */
 }
 
 .rating svg {
-  color: #f8e825;
+  color: #f8e825; /* Gold color for stars */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
+.rating svg:hover {
+  transform: scale(1.2); /* Slightly enlarges stars on hover */
+}
+
+/* Rating text */
 .rating-text {
-  font-size: 0.8rem;
+  font-size: 1rem; /* Increased text size for better readability */
   font-weight: 600;
   padding-left: 0.5rem;
+  color: #555; /* Provides a contrasting color for text */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
+.rating-text:hover {
+  color: #333; /* Darker color on hover */
+}
+
+/* Product title */
 .product-title {
-  height: 2.5em; /* Set a fixed height */
-  overflow: hidden; /* Hide overflow content */
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  white-space: nowrap; /* Prevent wrapping */
+  height: 2.5em; /* Fixed height */
+  overflow: hidden; /* Hides overflow content */
+  text-overflow: ellipsis; /* Adds ellipsis for long text */
+  white-space: nowrap; /* Prevents wrapping */
+  font-size: 1.2rem; /* Adjusted for readability */
+  font-weight: 600; /* Bolder font weight */
+  color: #444; /* Darker color for better contrast */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.product-title:hover {
+  color: #222; /* Even darker color on hover */
+}
+
+/* Table headers and cells */
+table {
+  width: 100%; /* Ensures the table occupies full width */
+  border-collapse: collapse; /* Removes spacing between borders */
 }
 
 table td,
 table th {
-  text-align: center;
+  text-align: center; /* Center align text */
+  padding: 0.75rem; /* Adds padding for better spacing */
+  border: 1px solid #ddd; /* Light border for better readability */
+  transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
+table td:hover,
+table th:hover {
+  background-color: #f8f9fa; /* Light background on hover */
+}
+
+/* Review section */
 .review {
-  margin-top: 30px;
+  margin-top: 2rem; /* Adjusted margin for better spacing */
 }
 
 .review h2 {
-  font-size: 24px;
+  font-size: 1.75rem; /* Increased font size for better visibility */
   background: #f4f4f4;
-  padding: 10px;
+  padding: 1rem; /* Increased padding for a more spacious look */
   border: 1px solid #ddd;
+  border-radius: 0.5rem; /* Rounded corners for a modern look */
+  color: #333; /* Darker color for the header text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
+/* Review button */
 .review button {
-  margin-top: 10px;
+  margin-top: 1.5rem; /* Increased margin for better separation */
+  padding: 0.75rem 1.5rem; /* Adds padding to the button */
+  border: none; /* Removes default border */
+  border-radius: 0.5rem; /* Rounded corners for a modern look */
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* White text color */
+  cursor: pointer; /* Pointer cursor for better UX */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
+.review button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.review button:active {
+  transform: translateY(1px); /* Pressed effect */
+}
+
+/* Carousel caption */
 .carousel-caption {
   position: absolute;
   width: 100%;
   left: 0;
-  right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6); /* Darker background with transparency */
+  color: #fff; /* White text color */
+  padding: 1rem; /* Increased padding for spacing */
+  text-align: center; /* Center align text */
+  font-size: 1.2rem; /* Adjusted font size for better readability */
+  border-top-left-radius: 0.5rem; /* Rounded top-left corner */
+  border-top-right-radius: 0.5rem; /* Rounded top-right corner */
 }
