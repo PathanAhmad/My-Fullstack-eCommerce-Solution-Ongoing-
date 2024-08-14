@@ -10,7 +10,7 @@ import orderRoutes from './routes/orderRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import cors from 'cors';
-const cors = require('cors');
+
 
 const port = process.env.PORT || 5000;
 
